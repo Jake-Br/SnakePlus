@@ -127,6 +127,11 @@ namespace SnakePlus {
         }
 
         public void RemoveTail() { // removes the tail at the end of the snake
+            if (tailQueue.Count == 1) { // if only one tail just dequeue it and early return
+                tailQueue.Dequeue();
+                return;
+            }
+
             Queue<Tail> copyQueue = new Queue<Tail>();
 
             while (tailQueue.Count > 0) { // copy the tail queue

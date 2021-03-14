@@ -174,7 +174,7 @@ namespace SnakePlus {
                             break;                           
                         }
                         else if (entity is SpeedBoost) { // speed up snake
-                            speedInMS -= 50;
+                            speedInMS /= 2;
                         }                       
                     }
                 }         
